@@ -49,7 +49,7 @@ def login():
             error = 'Invalid Credentials. Please try again.'
         else:
             correct_login = 1
-            return redirect(url_for('index'))
+            return redirect(url_for('cookie'))
     return render_template('login.html', error=error)
 
 # Route for the login page
