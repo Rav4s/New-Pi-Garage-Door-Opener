@@ -57,13 +57,11 @@ def login():
 @app.route('/set-cookie')
 def cookie():
     if correct_login == 1:
-        print("hello")
         resp = make_response()
         resp.set_cookie('logged_in', 'yes')
-        return resp
+        return resp, redirect(url_for('index'))
     else:
         return 'Not logged in.'
-    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0') #Run the webserver
