@@ -59,7 +59,7 @@ def cookie():
     if correct_login == 1:
         resp = make_response()
         resp.set_cookie('logged_in', 'yes')
-        return resp and return redirect(url_for('index'))
+        return resp
     else:
         return 'Not logged in.'
 
