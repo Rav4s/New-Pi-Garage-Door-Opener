@@ -16,6 +16,9 @@ GPIO.setup(11, GPIO.OUT)
 GPIO.output(7, True)
 GPIO.output(11, True)
 
+#A variable
+correct_login = 0
+
 # Route for the main page
 @app.route('/')
 def index():
@@ -45,8 +48,20 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
+            correct_login = 1
             return redirect(url_for('index'))
     return render_template('login.html', error=error)
+
+# Route for the login page
+@app.route('/set-cookie')
+def cookie():
+    if correct_login = 1:
+        print("hello")
+        resp = make_response()
+        resp.set_cookie('logged_in', 'yes')
+        return resp
+    else:
+        return 'Not logged in.'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0') #Run the webserver
