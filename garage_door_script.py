@@ -16,7 +16,7 @@ GPIO.setup(11, GPIO.OUT)
 GPIO.output(7, True)
 GPIO.output(11, True)
 
-#A variable
+#Variables
 correct_login = 0
 
 # Route for the main page
@@ -48,6 +48,7 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
+            global correct_login
             correct_login = 1
             return redirect(url_for('cookie'))
     return render_template('login.html', error=error)
