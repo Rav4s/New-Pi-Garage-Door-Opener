@@ -61,7 +61,7 @@ def login():
 @app.route('/set-cookie')
 def cookie():
     if correct_login == 1:
-        resp = make_response()
+        resp = make_response(redirect('/'))
         resp.set_cookie('logged_in', 'yes')
         return resp
     else:
