@@ -3,7 +3,7 @@
 # Load libraries
 import RPi.GPIO as GPIO #Import RPi GPIO library
 import time #Import time
-from flask import Flask #Import flask web server
+from flask import Flask, make_response, request, render_template, redirect, url_for #Import flask web server and additional components
 app = Flask(__name__)
 
 # Set up the GPIO pins
@@ -16,7 +16,8 @@ GPIO.setup(11, GPIO.OUT)
 GPIO.output(7, True)
 GPIO.output(11, True)
 
-@app.route('/') #root directory of webserver
+# Route for the main page
+@app.route('/')
 def index():
     GPIO.setup(PIN_TRIG, GPIO.OUT) #Setup the gpio trigger pin as input
     GPIO.setup(PIN_ECHO, GPIO.IN) #Setup the gpio echo pin as output
@@ -35,6 +36,17 @@ def index():
         return 'The garage is closed.'
     else:
         return 'The garage is open.'
+
+# Route for the login page
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('home'))
+    return render_template('login.html', error=error)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0') #Run the webserver
