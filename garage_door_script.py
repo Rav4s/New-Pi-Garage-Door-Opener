@@ -42,7 +42,7 @@ def index():
         else:
             return 'The garage is open.'
     else:
-        return 'Please login.'
+        return redirect(url_for('login'))
 
 # Route for the login page
 @app.route('/login', methods=['GET', 'POST'])
