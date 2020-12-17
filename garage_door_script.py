@@ -31,6 +31,10 @@ def index():
         pulse_end_time = time.time() #Record the time the waves traveled back to the sensor
         pulse_duration = pulse_end_time - pulse_start_time #Calculate how long it took for the round trip of the waves
         distance = round(pulse_duration * 17150, 2) #Convert the time it took to centimeters and round to 2 decimals
+    if distance >= 80: #Check if the distance is less than 80cm (This will depend on the garage)
+        return 'The garage is closed.'
+    else:
+        return 'The garage is open.'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0') #Run the webserver
