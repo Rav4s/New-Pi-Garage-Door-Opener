@@ -44,6 +44,11 @@ a.overridefloat {
   color: white;
 }
 
+a.overridefloat:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 a.text {
   font-size: 25px;
   font-weight: bold;
