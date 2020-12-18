@@ -2,8 +2,9 @@
 
 # Load libraries
 import RPi.GPIO as GPIO #Import RPi GPIO library
-import time #Import time
-from flask import Flask, make_response, request, render_template, redirect, url_for #Import flask web server and additional components
+import time
+import os
+from flask import Flask, make_response, request, render_template, redirect, url_for, send_from_directory #Import flask web server and additional components
 app = Flask(__name__)
 
 # Set up the GPIO pins
@@ -66,6 +67,11 @@ def cookie():
         return resp
     else:
         return 'Not logged in.'
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                          'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0') #Run the webserver
