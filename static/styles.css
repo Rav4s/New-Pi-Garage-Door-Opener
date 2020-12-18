@@ -21,6 +21,17 @@ a {
   border-radius: 4px;
 }
 
+.none {
+  float: none;
+  color: dodgerblue;
+  text-align: inherit;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 0px;
+  border-radius: 0px;
+}
+
 a.text {
   font-size: 25px;
   font-weight: bold;
