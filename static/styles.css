@@ -21,17 +21,17 @@ a {
   border-radius: 4px;
 }
 
-.header a.text {
+a.text {
   font-size: 25px;
   font-weight: bold;
 }
 
-.header a:hover {
+a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.header a.active {
+a.active {
   background-color: dodgerblue;
   color: white;
 }
