@@ -71,7 +71,6 @@ a.active {
   .header a {
     float: none;
     display: block;
-    text-align: left;
   }
 
   .header-right {
