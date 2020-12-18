@@ -44,7 +44,7 @@ def index():
             message = 'The garage is open.'
     else:
         return redirect(url_for('login'))
-    return render_template('index.html', message=message)
+    return render_template('index.html', message=message, distance=distance)
 
 # Route for the login page
 @app.route('/login', methods=['GET', 'POST'])
