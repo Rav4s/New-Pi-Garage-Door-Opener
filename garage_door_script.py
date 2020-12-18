@@ -77,4 +77,4 @@ def favicon():
                           'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0:80') #Run the webserver
+    app.run(host='0.0.0.0', port=80) #Run the webserver
