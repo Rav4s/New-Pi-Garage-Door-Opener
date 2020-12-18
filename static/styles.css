@@ -56,7 +56,7 @@ a.active {
   float: left;
   width: 50%;
   padding: 10px;
-  height: calc(100vh - 89px)
+  height: calc(100vh - 178px)
 }
 
 .row:after {
@@ -73,6 +73,6 @@ a.active {
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
-    height: calc((100vh - 138px)*0.5)
+    height: calc((100vh - 276px)*0.5)
   }
 }
