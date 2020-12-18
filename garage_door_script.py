@@ -40,11 +40,13 @@ def index():
             distance = round(pulse_duration * 17150, 2) #Convert the time it took to centimeters and round to 2 decimals
         if distance >= 80: #Check if the distance is less than 80cm (This will depend on the garage)
             message = 'The garage is closed.'
+            OpenOrClose = 'Open'
         else:
             message = 'The garage is open.'
+            OpenOrClose = 'Close'
     else:
         return redirect(url_for('login'))
-    return render_template('index.html', message=message, distance=distance)
+    return render_template('index.html', message=message, distance=distance, OpenOrClose=OpenOrClose)
 
 # Route for the login page
 @app.route('/login', methods=['GET', 'POST'])
