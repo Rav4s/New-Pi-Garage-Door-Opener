@@ -78,6 +78,19 @@ def logout():
     resp.set_cookie('logged_in', expires=0)
     return resp
 
+# Route for the garage opener page
+@app.route('/open-garage')
+def open_garage():
+    logged_in = request.cookies.get('logged_in')
+    if logged_in == "yes":
+        GPIO.output(7, False)
+        time.sleep(.8)
+        GPIO.output(7, True)
+        time.sleep(4)
+        return redirect(url_for('index'))
+    else:
+        return 'You are not logged in.'
+
 # Route for the favicon
 @app.route('/favicon.ico')
 def favicon():
