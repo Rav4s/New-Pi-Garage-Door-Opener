@@ -27,7 +27,7 @@ def index():
     if logged_in == "yes":
         GPIO.setup(PIN_TRIG, GPIO.OUT) #Setup the gpio trigger pin as input
         GPIO.setup(PIN_ECHO, GPIO.IN) #Setup the gpio echo pin as output
-        time.sleep(2) #Wait for 2 seconds for sensor to settle
+        time.sleep(0.5) #Wait for 0.5 seconds for sensor to settle
         GPIO.output(PIN_TRIG, GPIO.LOW) #Set trigger to low
         GPIO.output(PIN_TRIG, GPIO.HIGH) #Set trigger to high
         time.sleep(0.00001) #Wait for 0.1 milliseconds before setting to low again
