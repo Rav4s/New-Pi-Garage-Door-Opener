@@ -73,5 +73,6 @@ a.active {
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
+    height: calc((100vh - 89px)*0.5)
   }
 }
