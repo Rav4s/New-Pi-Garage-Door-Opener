@@ -86,7 +86,7 @@ def open_garage():
         GPIO.output(7, False)
         time.sleep(.8)
         GPIO.output(7, True)
-        time.sleep(6)
+        time.sleep(8) #Sleep for 8 seconds to ensure the garage opens before page redirect
         return redirect(url_for('index'))
     else:
         return 'You are not logged in.'
