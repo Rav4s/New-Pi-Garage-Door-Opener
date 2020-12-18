@@ -21,7 +21,7 @@ a {
   border-radius: 4px;
 }
 
-.none {
+a.none {
   float: none;
   color: dodgerblue;
   text-align: inherit;
