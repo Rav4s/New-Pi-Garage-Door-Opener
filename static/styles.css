@@ -10,7 +10,7 @@ body {
   padding: 20px 10px;
 }
 
-.header a {
+a {
   float: left;
   color: black;
   text-align: center;
