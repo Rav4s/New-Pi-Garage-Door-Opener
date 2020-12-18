@@ -71,6 +71,14 @@ def cookie():
     else:
         return 'Not logged in.'
 
+# Route for the logout page
+@app.route('/logout')
+def logout():
+    resp = make_response('/login')
+    resp.set_cookie('logged_in', expires=0)
+    return resp
+
+# Route for the favicon
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
