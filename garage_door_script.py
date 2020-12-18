@@ -74,7 +74,7 @@ def cookie():
 # Route for the logout page
 @app.route('/logout')
 def logout():
-    resp = make_response('/login')
+    resp = make_response(redirect('/login'))
     resp.set_cookie('logged_in', expires=0)
     return resp
 
