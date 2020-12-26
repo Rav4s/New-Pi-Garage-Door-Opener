@@ -4,7 +4,7 @@ A rewrite of the Raspberry Pi Garage Door Opener using Flask.
 This repo contains a python script (garage_door_script.py), which runs a Flask web server that allows you to control and monitor your Raspberry Pi Garage Door Opener. This script assumes you have the same hardware configuration as described in this video: https://youtu.be/An7KQbmUnhs.   
    
 ## Differences between this and the old python garage door control script (https://github.com/Rav4s/Pi-Garage-Door-Opener)
-Unlike the old script, this one allows you to view the status of your garage door and control it from one webpage. Also, once you sign it, it sets a cookie which allows you to stay signed in after closing and re-opening the page. Improvements have also been made for mobile usability and overall look and feel (see the screenshots below).   
+Unlike the old script, this one allows you to view the status of your garage door and control it from one webpage. Also, once you sign in, it sets a cookie which allows you to stay signed in after closing and re-opening the page. Improvements have also been made for mobile usability and overall look and feel (see the screenshots below).   
 
 ## What's in each folder?
 The static folder contains the Bootstrap CSS framework, along with the main CSS file and the favicon.   
