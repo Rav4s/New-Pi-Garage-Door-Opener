@@ -18,4 +18,4 @@ This python script requires python 3.x, Flask, and RPi.GPIO.
 To run the python script, first clone the repository using `git clone https://github.com/Rav4s/New-Pi-Garage-Door-Opener`. Then enter the directory using `cd New-Pi-Garage-Door-Opener`. Then finally run the script using `python3 garage_door_script.py`. Your web server will be accessible at http://serverip:1235/.   
 
 ## Screenshots
-To be added later
+![Screenshot of main page](Screenshot%202020-12-26%20170542.png)
