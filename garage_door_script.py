@@ -66,7 +66,7 @@ def login():
 def cookie():
     if correct_login == 1:
         resp = make_response(redirect('/'))
-        resp.set_cookie('logged_in', 'yes', expires=604800)
+        resp.set_cookie('logged_in', 'yes', max_age=604800)
         return resp
     else:
         return 'Not logged in.'
