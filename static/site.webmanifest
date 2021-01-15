@@ -1,15 +1,24 @@
 {
   "short_name": "Garage Door",
   "name": "Control your garage door opener",
-  "description": "Weather forecast information",
   "icons": [
     {
-      "src": "/images/icons-192.png",
+      "src": "/static/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/static/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/static/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icons-512.png",
+      "src": "/static/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
