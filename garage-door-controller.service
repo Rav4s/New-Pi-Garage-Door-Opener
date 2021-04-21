@@ -1,0 +1,14 @@
+[Unit]
+Description=Control and monitor the state of your smart garage door opener
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u garage_door_script.py
+WorkingDirectory=/home/pi/garagedoor
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
