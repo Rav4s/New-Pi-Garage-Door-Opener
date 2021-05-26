@@ -3,22 +3,22 @@
   "name": "Control your garage door opener",
   "icons": [
     {
-      "src": "/static/favicon-16x16.png",
+      "src": "/static/images/favicon-16x16.png",
       "type": "image/png",
       "sizes": "16x16"
     },
     {
-      "src": "/static/favicon-32x32.png",
+      "src": "/static/images/favicon-32x32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "/static/android-chrome-192x192.png",
+      "src": "/static/images/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/static/android-chrome-512x512.png",
+      "src": "/static/images/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
