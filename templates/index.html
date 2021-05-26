@@ -5,7 +5,11 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" media="screen">
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="My Garage" name="apple-mobile-web-app-title">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-startup-image" sizes="512x512" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="icon" sizes="96x96" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
