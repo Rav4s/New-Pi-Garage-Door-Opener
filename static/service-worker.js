@@ -10,7 +10,7 @@ if (workbox) {
 
   workbox.precaching.precacheAndRoute([
     {
-      "url": "/",
+      "url": "/login",
       "revision": "1"
     }
   ]);
